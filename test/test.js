@@ -63,4 +63,28 @@ describe('FileLookup', function () {
     });
   });
 
+  it('#resolveSync - 1', function () {
+    var lookup = new FileLookup();
+    var filename = lookup.resolveSync('FILE_A.txt');
+    should.notEqual(typeof filename, 'string');
+  });
+
+  it('#resolveSync - 2', function () {
+    var lookup = new FileLookup();
+    lookup.add(path.resolve(__dirname, 'path1/a/d'));
+    var filename = lookup.resolveSync('FILE_A.txt');
+    should.equal(typeof filename, 'string');
+    should.equal(filename, path.resolve(__dirname, 'path1/a/d/FILE_A.txt'));
+  });
+
+  it('#resolveSync - 3', function () {
+    var lookup = new FileLookup();
+    lookup.add(path.resolve(__dirname, 'path2/c'));
+    lookup.add(path.resolve(__dirname, 'path3/e'));
+    lookup.add(path.resolve(__dirname, 'path1/a/d'));
+    var filename = lookup.resolveSync('FILE_A.txt');
+    should.equal(typeof filename, 'string');
+    should.equal(filename, path.resolve(__dirname, 'path3/e/FILE_A.txt'));
+  });
+
 });
