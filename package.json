@@ -1,6 +1,6 @@
 {
   "name": "file-lookup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Resolve filename specified by a list of paths",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/leizongmin/node-node-file-lookup.git"
+    "url": "git://github.com/leizongmin/node-file-lookup.git"
   },
   "keywords": [
     "file",
@@ -18,9 +18,9 @@
   "author": "Zongmin Lei <leizongmin@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leizongmin/node-node-file-lookup/issues"
+    "url": "https://github.com/leizongmin/node-file-lookup/issues"
   },
-  "homepage": "https://github.com/leizongmin/node-node-file-lookup",
+  "homepage": "https://github.com/leizongmin/node-file-lookup",
   "devDependencies": {
     "should": "~3.3.0",
     "mocha": "~1.18.2"
